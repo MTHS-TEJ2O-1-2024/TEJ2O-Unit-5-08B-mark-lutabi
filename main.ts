@@ -6,6 +6,7 @@
  * This program rotates the motors according to how much is the distance
 */
 
+
 // setup
 basic.showIcon(IconNames.Happy)
 
@@ -22,8 +23,9 @@ while (true) {
     if (distanceOfObject < 10) {
         robotbit.StpCarMove(0, 0)
         basic.showIcon(IconNames.No)
+        robotbit.StpCarMove(-10, -65)
     } else {
-        robotbit.StpCarMove(10, 48)
+        robotbit.StpCarMove(10, -65)
         basic.showIcon(IconNames.Yes)
     }
 }
